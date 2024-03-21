@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/checkoutpage.css" />
+    <link rel="stylesheet" href="footer/footer/footer.css" />
+    <title>Checkout</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="index.html" onsubmit="check()">
+        <div class="row">
+          <div class="col">
+            <h3 class="title">billing address</h3>
+
+            <div class="inputBox">
+              <span>full name :</span>
+              <input
+                onchange="removeErr(this)"
+                type="text"
+                placeholder="John doe"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>email :</span>
+              <input
+                onchange="removeErr(this)"
+                type="email"
+                placeholder="example@example.com"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>address :</span>
+              <input
+                onchange="removeErr(this)"
+                type="text"
+                placeholder="No, Street, City"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>city :</span>
+              <input
+                onchange="removeErr(this)"
+                type="text"
+                placeholder="Nevada"
+                required
+              />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>state :</span>
+                <input
+                  onchange="removeErr(this)"
+                  type="text"
+                  placeholder="USA"
+                  required
+                />
+              </div>
+              <div class="inputBox">
+                <span>zip code :</span>
+                <input
+                  onchange="removeErr(this)"
+                  type="text"
+                  placeholder="12345"
+                  maxlength="6"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3 class="title">Payment Details</h3>
+
+           
+            <div class="inputBox">
+              <span>name on card :</span>
+              <input
+                onchange="removeErr(this)"
+                type="text"
+                placeholder="JOHN DOE"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>credit card number :</span>
+              <input
+                onchange="removeErr(this)"
+                type="text"
+                id="card-num"
+                placeholder="0000-0000-0000-0000"
+                pattern="[0-9.-]+"
+                maxlength="19"
+                oninput="checkFormat(this)"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>exp month :</span>
+              <input
+                onchange="removeErr(this)"
+                type="text"
+                placeholder="January"
+                required
+              />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>exp year :</span>
+                <input
+                  onchange="removeErr(this)"
+                  type="number"
+                  placeholder="25"
+                  max="9999"
+                  required
+                />
+              </div>
+              <div class="inputBox">
+                <span>CVV :</span>
+                <input
+                  onchange="removeErr(this)"
+                  type="password"
+                  placeholder="999"
+                  maxlength="3"
+                  required
+                />
+              </div>
+              <div class="inputBox">
+                <span>cards accepted :</span>
+                <img src="icons/visa.jpg" alt="" />
+                <img src="icons/Mastercard.webp" alt="" />
+                <img src="icons/paypal.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Pay now</button>
+
+        <script>
+          var preIn = 0;
+          function checkFormat(box) {
+            let num = box.value.length;
+            if ((num == 4 || num == 9 || num == 14) && num > preIn) {
+              box.value += "-";
+            } else if (num < preIn) {
+              if (box.value[num - 1] == "-") {
+                box.value = box.value.slice(0, -1);
+              }
+            }
+            preIn = num;
+          }
+          function removeErr(el) {
+            if (el.value != "" && el.value != null) el.classList.remove("err");
+          }
+
+          function check() {
+            let err = true;
+            document.querySelectorAll("input").forEach((e) => {
+              if (e.value == null || e.value == "") {
+                e.classList.add("err");
+                err = false;
+              } else {
+                e.classList.remove("err");
+              }
+            });
+            if (err) {
+              alert(
+                "Thank you for purchasing our product !!! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧........ You will be redirected to the main site....."
+              );
+              // window.location.replace('splash_screen.html')
+            }
+            return err;
+          }
+        </script>
+      </form>
+    </div>
+  </body>
+</html>
