@@ -1,0 +1,273 @@
+@font-face {
+    font-family: head;
+    src: url("Fonts/Abrashe.ttf");
+}
+
+@font-face {
+    font-family: body;
+    src: url("Fonts/VintageGlamour-Regular.ttf");
+}
+
+body {
+    font-family: body !important;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    z-index: -1000;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+
+}
+
+.logo-txt {
+    display: inline-block;
+    font-size: 30px;
+    font-family: head;
+    color: #FFFCF2;
+    padding-left: 0px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #201F1C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: #FFFCF2;
+    transition: color .5s;
+    font-size: 15px;
+}
+
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+    align-items: center;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+    font-size: 20px;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: #EB5E28;
+}
+
+.navbar .nav-links ul li.active a {
+    color: #eb5e28;
+    font-weight: 600;
+}
+
+.navbar .selected-link {
+    color: #EB5E28;
+}
+
+.navbar .selected-link:hover {
+    cursor: default;
+}
+
+.navbar .menu-hamburger-box {
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+}
+
+.navbar .menu-hamburger {
+    opacity: 0;
+    position: absolute;
+    z-index: 1100;
+    content: "";
+    background-color: aliceblue;
+    height: 1.5px;
+    width: 25px;
+    top: 70%;
+    transition: width .3s, height .3s;
+}
+
+.navbar .menu-hamburger::before {
+    position: absolute;
+    content: "";
+    background-color: aliceblue;
+    height: 1.5px;
+    width: 25px;
+    top: -9px;
+    transition: transform .3s, top .3s;
+}
+
+.navbar .menu-hamburger::after {
+    position: absolute;
+    content: "";
+    background-color: aliceblue;
+    height: 1.5px;
+    width: 25px;
+    top: 9px;
+    transition: transform .3s, top .3s;
+}
+
+.menu-hamburger-close {
+    transform: none;
+}
+
+@media screen and (max-width: 1014px) {
+    .navbar .menu-hamburger {
+        opacity: 1;
+    }
+
+    .navbar .menu-hamburger-box {
+        position: absolute;
+        cursor: pointer;
+        height: 50px;
+        width: 25px;
+
+    }
+
+    
+.footer {
+    background-color: #201F1C;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    margin-top: auto;
+}
+
+.f-logo {
+    width: 50%;
+}
+
+.f-logo img {
+    width: 100%;
+}
+
+.comments {
+    width: 80%;
+    padding: 20px;
+}
+
+.comments form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+    align-items: center;
+}
+
+
+.rate {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 100%;
+    text-align: center;
+    row-gap: 5px;
+    padding: 15px;
+}
+
+.rate input {
+    margin: 0 !important;
+}
+
+.comments form input,
+textarea,
+.comments button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #232222;
+    border: 2px solid #232222;
+    outline: none;
+    color: white;
+    width: 100%;
+    font-family: body;
+    transition: box-shadow .3s;
+}
+
+#name:focus,
+#mail:focus,
+textarea:focus {
+    border: 2px solid #f5e6e0;
+    box-shadow: 0 0 4px #eb5e28;
+}
+
+#submit {
+    background-color: #FFFCF2;
+    color: black;
+    border-radius: 20px;
+}
+
+.contacts {
+    color: white;
+    width: 100%;
+    padding: 20px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.contacts p,
+.contacts ul li {
+    padding: 20px;
+}
+
+#creator {
+    position: relative;
+    padding: 40px 20px 20px 20px;
+    color: white;
+    font-size: 20px;
+}
+#creator-link a{
+    color: white;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+    .footer {
+        flex-direction: column-reverse;
+    }
+}}
