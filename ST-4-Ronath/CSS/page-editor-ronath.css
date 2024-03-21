@@ -1,0 +1,136 @@
+/* Student Name: Ronath Tharana Wijayin
+Student Role: student 4 */
+
+@font-face {
+  font-family: head;
+  src: url("Fonts/Abrashe.ttf");
+}
+
+@font-face {
+  font-family: body;
+  src: url("Fonts/VintageGlamour-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: body;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1000;
+}
+
+.box {
+  width: 100vw;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  box-shadow: 0.3px 1px 10px #ffffffa7;
+  background-color: #ffffff6a;
+  border-radius: 20px;
+  padding: 30px;
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.topic {
+  font-size: 40px;
+  text-align: center;
+}
+
+.topic span {
+  font-size: 25px;
+}
+
+.img-container .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container .img img {
+  border-radius: 10px;
+  max-height: 400px;
+  max-width: 400px;
+  box-shadow: 0.3px 1px 10px #000000a7;
+}
+
+.info-container,
+.task-con {
+  padding: 30px 0 0 0;
+}
+
+.info-container ul li,
+.task-container ul li {
+  font-size: 20px;
+  padding: 10px 0 10px 0;
+}
+
+.task-container > ul > ul {
+  padding-left: 40px;
+}
+
+.button {
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px;
+  margin-left: 280px;
+  background-color: black;
+  color: white;
+}
+
+.button:hover {
+  color: #5dd6f4;
+}
+
+.task-container > ul > ul > li {
+  list-style: disc;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 98%;
+  }
+  .img-container .img img {
+    width: 100%;
+  }
+}

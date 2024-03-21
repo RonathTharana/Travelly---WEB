@@ -1,0 +1,365 @@
+<!--Student Name: Ronath Tharana Wijayin-->
+<!--Student Role: student 4 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="CSS/gallery.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
+  </head>
+
+  <body>
+    <!-- All navigation bar contents -->
+    <nav id="top">
+      <a href="../ST-2-Ashley/index.html">
+        <img class="logo" src="icons/Travelly-nav.png" alt="logo" />
+      </a>
+      <!--menu items-->
+      <ul>
+        <li><a href="../ST-2-Ashley/index.html" class="selected">HOME</a></li>
+        <li><a href="../ST-1-Iman/buyproducts.html">SHOP</a></li>
+        <li><a href="../ST-4-Ronath/gallery.html">GALLERY</a></li>
+        <li><a href="../ST-3-Asani/quiz.html">QUIZ</a></li>
+        <li><a href="../ST-4-Ronath/Sitemap.html">SITE MAP</a></li>
+        <li><a href="../ST-2-Ashley/contact.html">CONTACT</a></li>
+        <li><a href="../ST-3-Asani/student_details.html">ABOUT US</a></li>
+      </ul>
+    </nav>
+
+    <!-- image gallery main topic and background video -->
+    <div class="container">
+      <video autoplay loop muted class="container-video">
+        <source src="videos/video-1.mp4" type="video/mp4" />
+      </video>
+
+      <div class="content">
+        <h1 id="h1">The Beauty of the world</h1>
+        <h2 id="h2">--image gallery--</h2>
+        <a href="#h3" id="a">Explore</a>
+      </div>
+    </div>
+
+    <!--Image Gallery Starts-->
+    <h3 id="h3">Start Exploring</h3>
+
+    <!-- First sub topic and the first row starts -->
+    <div class="sub-topic" id="sub-topic1">
+      Most popular natural attractions
+    </div>
+
+    <div class="gallery-container">
+      <div class="prebtn" onclick="goPre(this.parentElement)">&laquo;</div>
+      <div class="nxtbtn" onclick="goNxt(this.parentElement)">&raquo;</div>
+      <div class="gallery-row">
+        <div class="gallery-column">
+          <img
+            src="images/images1/pic1.jpg"
+            alt="<br><br>Niagara Falls (Canada/United States)<br><br><br><br>On the border between Canada and the United States, Niagara Falls is a majestic waterfall renowned for its powerful cascades and breathtaking views."
+          />
+          <div class="info" onmouseover="popUpFunction(this,1);">
+            <div class="image-name">Canada</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images1/pic2.jpg"
+            alt="<br><br>The Amazon Rainforest (South America)<br><br><br><br>The world's largest tropical rainforest, the Amazon is a biodiverse paradise where visitors can experience the vibrant ecosystem, encounter unique wildlife, and explore the winding rivers."
+          />
+          <div class="info" onmouseover="popUpFunction(this,1);">
+            <div class="image-name">South America</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images1/pic3.jpg"
+            alt="<br><br>The Galapagos Islands (Ecuador)<br><br><br><br>This unique archipelago in the Pacific Ocean is known for its abundant wildlife, including giant tortoises, marine iguanas, and blue-footed boobies, offering a one of a kind ecological experience."
+          />
+          <div class="info" onmouseover="popUpFunction(this,1);">
+            <div class="image-name">Ecuador</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images1/pic4.jpg"
+            alt="<br><br>The Grand Canyon (United States)<br><br><br><br>This colossal canyon in Arizona showcases awe-inspiring rock formations and offers hiking trails, scenic viewpoints, and helicopter tours for visitors to appreciate its immense beauty."
+          />
+          <div class="info" onmouseover="popUpFunction(this,1);">
+            <div class="image-name">United States</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images1/pic5.jpg"
+            alt="<br><br>The Great Barrier Reef (Australia)<br><br><br><br>This iconic coral reef system off the coast of Australia is a UNESCO World Heritage Site and offers incredible snorkeling and diving opportunities to explore its vibrant marine life."
+          />
+          <div class="info" onmouseover="popUpFunction(this,1);">
+            <div class="image-name">Australia</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images1/pic6.jpg"
+            alt="<br><br>Nuwara Eliya (Sri Lanka)<br><br><br><br>Known as 'Little England', Nuwara Eliya offers picturesque landscapes, lush tea plantations, and a refreshing cool climate, making it a unique and serene escape in Sri Lanka's hill country."
+          />
+          <div class="info" onmouseover="popUpFunction(this,1);">
+            <div class="image-name">Sri lanka</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images1/pic7.jpg"
+            alt="<br><br>The Plitvice Lakes National Park (Croatia)<br><br><br><br>This national park is famous for its interconnected series of stunning lakes and cascading waterfalls, making it a picturesque and enchanting destination."
+          />
+          <div class="info" onmouseover="popUpFunction(this,1);">
+            <div class="image-name">Croatia</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images1/pic8.jpg"
+            alt="<br><br>The Serengeti (Tanzania)<br><br><br><br>Known for its vast savannahs and the annual Great Migration, the Serengeti is home to diverse wildlife, including lions, elephants, and zebras, making it a popular destination for wildlife safaris."
+          />
+          <div class="info" onmouseover="popUpFunction(this,1);">
+            <div class="image-name">Tanzania</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images1/pic9.jpg"
+            alt="<br><br>The Torres del Paine National Park (Chile)<br><br><br><br>Located in the Patagonian region of Chile, this national park features breathtaking granite peaks, glaciers, and picturesque landscapes, attracting hikers and nature lovers."
+          />
+          <div class="info" onmouseover="popUpFunction(this,1);">
+            <div class="image-name">Chile</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images1/pic10.jpg"
+            alt="<br><br>The Victoria Falls (Zambia/Zimbabwe)<br><br><br><br>Considered one of the Seven Natural Wonders of the World, Victoria Falls captivates visitors with its thundering waterfalls and offers activities like whitewater rafting, bungee jumping, and wildlife safaris."
+          />
+          <div class="info" onmouseover="popUpFunction(this,1);">
+            <div class="image-name">Zimbabwe</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- The first row ends -->
+
+    <!-- The first row popup container -->
+    <div class="popup-container">
+      <span onclick="closePopUpContainer(this, 1)" class="closebtn"
+        >&times;</span
+      >
+      <img src="#" alt="" id="expandedImg1" />
+      <div id="imgtext1"></div>
+    </div>
+
+    <!-- Second sub topic and the second row starts -->
+    <div class="sub-topic" id="sub-topic2">
+      Most popular cultural attractions
+    </div>
+
+    <div class="gallery-container">
+      <div class="prebtn" onclick="goPre(this.parentElement)">&laquo;</div>
+      <div class="nxtbtn" onclick="goNxt(this.parentElement)">&raquo;</div>
+      <div class="gallery-row">
+        <div class="gallery-column">
+          <img
+            src="images/images2/pic1.jpg"
+            alt="<br><br>The Pyramids of Giza (Egypt)<br><br><br><br>The last remaining Wonder of the Ancient World, the Pyramids of Giza are a testament to Egypt's rich history and serve as a symbol of the ancient civilization's architectural marvels."
+          />
+          <div class="info" onmouseover="popUpFunction(this,2);">
+            <div class="image-name">Egypt</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images2/pic2.jpg"
+            alt="<br><br>The Acropolis of Athens (Greece)<br><br><br><br>Dominated by the Parthenon, the Acropolis is a UNESCO World Heritage Site and an enduring symbol of ancient Greek civilization and its architectural achievements."
+          />
+          <div class="info" onmouseover="popUpFunction(this,2);">
+            <div class="image-name">Greece</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images2/pic3.jpg"
+            alt="<br><br>The Alhambra (Spain)<br><br><br><br>Situated in Granada, the Alhambra is a stunning Moorish palace and fortress complex known for its intricate Islamic architecture, lush gardens, and breathtaking views."
+          />
+          <div class="info" onmouseover="popUpFunction(this,2);">
+            <div class="image-name">Spain</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images2/pic4.jpg"
+            alt="<br><br>The Angkor Wat (Cambodia)<br><br><br><br>This massive temple complex in Siem Reap is a UNESCO World Heritage Site and one of the most important archaeological sites in Southeast Asia, showcasing the Khmer Empire's grandeur."
+          />
+          <div class="info" onmouseover="popUpFunction(this,2);">
+            <div class="image-name">Cambodia</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images2/pic5.jpg"
+            alt="<br><br>The Colosseum (Italy)<br><br><br><br>Located in Rome, the Colosseum is an iconic amphitheater that once hosted gladiatorial contests and other spectacles. It stands as a symbol of the grandeur of the Roman Empire."
+          />
+          <div class="info" onmouseover="popUpFunction(this,2);">
+            <div class="image-name">Italy</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images2/pic6.jpg"
+            alt="<br><br>The Great Wall of China (China)<br><br><br><br>An incredible feat of engineering and a UNESCO World Heritage Site, the Great Wall of China offers visitors a chance to explore its ancient history and enjoy panoramic views."
+          />
+          <div class="info" onmouseover="popUpFunction(this,2);">
+            <div class="image-name">China</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images2/pic7.jpg"
+            alt="<br><br>The Louvre Museum (France)<br><br><br><br>Located in Paris, the Louvre Museum is the world's largest art museum and a historic monument. It houses an extensive collection of art, including the famous painting, Mona Lisa."
+          />
+          <div class="info" onmouseover="popUpFunction(this,2);">
+            <div class="image-name">France</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images2/pic8.jpg"
+            alt="<br><br>The Machu Picchu (Peru)<br><br><br><br>This ancient Incan city nestled high in the Andes Mountains offers visitors a glimpse into the rich history and architectural prowess of the Inca civilization."
+          />
+          <div class="info" onmouseover="popUpFunction(this,2);">
+            <div class="image-name">Peru</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images2/pic9.jpg"
+            alt="<br><br>The Taj Mahal (India)<br><br><br><br>This iconic mausoleum in Agra is renowned for its exquisite architecture and is considered one of the most beautiful buildings in the world."
+          />
+          <div class="info" onmouseover="popUpFunction(this,2);">
+            <div class="image-name">India</div>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <img
+            src="images/images2/pic10.jpg"
+            alt="<br><br>The Vatican City (Vatican City)<br><br><br><br>The spiritual and administrative headquarters of the Roman Catholic Church, the Vatican City is home to St. Peter's Basilica, the Sistine Chapel, and various art treasures."
+          />
+          <div class="info" onmouseover="popUpFunction(this,2);">
+            <div class="image-name">Vatican City</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- The second row ends -->
+
+    <!-- The second row popup container -->
+    <div class="popup-container">
+      <span onclick="closePopUpContainer(this, 2)" class="closebtn"
+        >&times;</span
+      >
+      <img src="#" alt="" id="expandedImg2" />
+      <div id="imgtext2"></div>
+    </div>
+
+    <!--Display Buttons to change font size, background color and the mode-->
+    <div class="more-options" onclick="options()">+</div>
+    <div class="options">
+      <button onclick="changeFontSize('increase')">A+</button>
+      <button onclick="changeFontSize('decrease')">A-</button>
+      <button onclick="changebgColor()">Background Color</button>
+      <button onclick="changeFontColor()">Text Color</button>
+      <button onclick="changeColorRandom()">Random Color</button>
+      <button id="mode" onclick="changeMode()">Dark Mode</button>
+
+      <ul id="background-color">
+        <li style="background: brown" onclick="bgColors(this)"></li>
+        <li style="background: green" onclick="bgColors(this)"></li>
+        <li style="background: purple" onclick="bgColors(this)"></li>
+        <li style="background: gray" onclick="bgColors(this)"></li>
+      </ul>
+
+      <ul id="font-color">
+        <li style="background: gray" onclick="fontColors(this)"></li>
+        <li style="background: purple" onclick="fontColors(this)"></li>
+        <li style="background: green" onclick="fontColors(this)"></li>
+        <li style="background: brown" onclick="fontColors(this)"></li>
+      </ul>
+    </div>
+    <!-- Image Gallery ends -->
+
+    <!-- Footer start -->
+    <div class="main">
+      <footer class="footer">
+        <div class="footer-left">
+          <a href="../ST-2-Ashley/index.html">
+            <img src="icons/Travelly.png" alt="logo" />
+          </a>
+          <p>
+            Our travelly website is your key to unlocking unforgettable
+            adventures across the globe. From breathtaking landscapes to
+            cultural marvels, we curate the best travel experiences for every
+            wanderer.
+          </p>
+        </div>
+
+        <ul class="footer-right">
+          <li>
+            <h2>Address</h2>
+
+            <ul class="box">
+              <li>57, Ramakrishna Rd,</li>
+              <li>Colombo 06</li>
+              <li>+94 763408122</li>
+              <li>ashley.20221899@iit.ac.lk</li>
+            </ul>
+          </li>
+
+          <li>
+            <h2>Developers</h2>
+
+            <ul class="box">
+              <li class="popup">
+                <a href="../ST-2-Ashley/page-editor-Ashley.html">Ashley</a>
+              </li>
+              <li class="popup">
+                <a href="../ST-3-Asani/page-editor-Asani.html">Asani</a>
+              </li>
+              <li class="popup">
+                <a href="../ST-1-Iman/Studentdetails.html">Iman</a>
+              </li>
+              <li class="popup">
+                <a href="../ST-4-Ronath/ronath.html">Ronath</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2>Creator</h2>
+
+            <ul class="box">
+              <li class="creator">
+                <a href="../ST-4-Ronath/ronath.html">Ronath</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="footer-bottom">
+          <p>All Right reserved by &copy;Travelly</p>
+        </div>
+      </footer>
+    </div>
+    <!-- Footer ends -->
+
+    <script src="JS/gallery.js"></script>
+  </body>
+</html>

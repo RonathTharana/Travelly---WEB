@@ -1,0 +1,80 @@
+/* Student Name: Ronath Tharana Wijayin
+Student Role: student 4 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main topic with a background image*/
+.background-image {
+  height: 40vh;
+  width: auto;
+  background-image: url(../images/svg/svg01.jpg);
+  background-size: cover;
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: 11.6vh;
+  height: 40vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  position: relative;
+  top: 0.75em;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 100px;
+  font-weight: 600;
+  color: white;
+  transition: 0.5s;
+}
+
+/* Main topic hover effect */
+.content:hover {
+  -webkit-text-stroke: 3px white;
+  color: transparent;
+}
+
+/* Sitemap svg size and background color */
+.svg {
+  width: 1550;
+  height: 450;
+  background-color: black;
+  margin-bottom: -2px;
+  user-select: none;
+}
+
+.svg g rect {
+  fill: #eb5e28;
+}
+
+.svg g text {
+  font-weight: bold;
+}
+
+/* Hover effect for svg */
+.svg g:hover polyline,
+.svg g:hover line {
+  fill: none;
+  stroke-width: 4;
+}
+
+.svg g:hover g text,
+.svg g:hover text {
+  font-weight: bold;
+}
+
+.svg g:hover polygon,
+.svg g:hover rect,
+.svg g:hover :focus polygon,
+.svg g:focus rect {
+  stroke: black;
+  fill: gray;
+  stroke-width: 4;
+}

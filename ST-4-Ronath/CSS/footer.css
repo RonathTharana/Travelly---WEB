@@ -1,0 +1,119 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  font-family: poppins;
+  display: grid;
+  font-size: 18px;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  color: white;
+  background-color: black;
+}
+
+footer > * {
+  flex: 1 100%;
+}
+
+.footer-left {
+  margin-right: 1.25em;
+  margin-bottom: 1.5em;
+}
+
+.footer-left img {
+  width: 70%;
+}
+
+.footer-left img:hover {
+  background-color: rgb(84, 7, 155);
+  border-radius: 45px;
+}
+
+h2 {
+  font-weight: 600;
+  color: #5dd6f4;
+  font-size: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+  font-weight: 400;
+}
+
+.popup,
+.creator {
+  margin-left: 10px;
+}
+
+.popup :hover {
+  color: orangered;
+  font-size: 20px;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer-right {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer-right > * {
+  flex: 0 50%;
+  margin-right: 1.25em;
+}
+
+.box a {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+}
+
+.footer-left p {
+  text-align: center;
+  padding-right: 20%;
+  color: white;
+}
+
+.creator :hover {
+  color: #5dd6f4;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .footer-right > * {
+    flex: 1 0px;
+  }
+
+  .footer-left {
+    flex: 2.5 0px;
+  }
+
+  .footer-right {
+    flex: 2.5 0px;
+  }
+}
+
+@media (min-width: 600px) {
+  .footer {
+    padding: 40px;
+  }
+}

@@ -1,0 +1,322 @@
+/* Student Name: Ronath Tharana Wijayin
+Student Role: student 4 */
+
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+}
+
+/* Main topic with a video background */
+.container {
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 80px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+
+.content h1:hover {
+  -webkit-text-stroke: 3px white;
+  color: transparent;
+}
+
+.content h2 {
+  font-family: Baskervville;
+  color: black;
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+.content a {
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 50px;
+  font-weight: bold;
+  display: inline-block;
+  font-weight: bold;
+  padding: 12px 60px;
+  margin-top: 20px;
+}
+
+/* Main topic hover effect */
+.content a:hover {
+  background-color: rgb(213, 205, 166);
+  border: 2px solid rgb(213, 205, 166);
+}
+
+.container-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .container-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .container-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+h3 {
+  margin-top: 10em;
+  font-family: Baskervville;
+  font-size: 40px;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-topic {
+  font-family: Baskervville;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 2em;
+  margin-bottom: 0em;
+  display: flex;
+}
+
+/* The next and previous buttons */
+.nxtbtn,
+.prebtn {
+  position: absolute;
+  color: black;
+  margin-top: 21px;
+  background-color: transparent;
+  backdrop-filter: blur(25px);
+  font-size: 60px;
+  z-index: 900;
+  height: 180px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nxtbtn {
+  right: 0;
+  border-top-left-radius: 200%;
+  border-bottom-left-radius: 200%;
+}
+
+.prebtn {
+  left: 0;
+  border-top-right-radius: 200%;
+  border-bottom-right-radius: 200%;
+}
+
+.gallery-container {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  scrollbar-width: none;
+}
+
+.gallery-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: calc(400 * 10px - 150px);
+}
+
+.gallery-column {
+  position: relative;
+  padding: 5px;
+}
+
+.gallery-column img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s ease;
+  background-color: black;
+  border-radius: 20px;
+}
+
+/* Image topic hover effect */
+.gallery-column:hover .info {
+  opacity: 0.8;
+}
+
+.image-name {
+  color: white;
+  font-family: Baskervville;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  user-select: none;
+}
+
+/* The popup image and text container */
+.popup-container {
+  padding: 15px;
+  flex-direction: row;
+  position: relative;
+  transform: scaleX(0);
+  left: -100%;
+  display: flex;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: rgb(238, 204, 158);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  transition: left 0.4s, transform 0.3s;
+}
+
+.popup-container img {
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Expanding text */
+#imgtext1,
+#imgtext2 {
+  width: 100%;
+  font-size: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Closable button inside the container */
+.closebtn {
+  position: absolute;
+  top: -4px;
+  right: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.more-options,
+.options {
+  position: fixed;
+  top: 85px;
+  z-index: 950;
+}
+
+.more-options {
+  font-size: 50px;
+  font-family: none;
+  background-color: black;
+  color: #5dd6f4;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  left: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.options {
+  background-color: transparent;
+  backdrop-filter: blur(35px);
+  border-radius: 25px;
+  left: -100%;
+  opacity: 0;
+  z-index: 850;
+  transition: opacity 0.2s ease-in-out, left 0.3s;
+}
+
+button {
+  border-radius: 20px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  box-shadow: 0.4px 1px 8px #5dd6f4;
+}
+
+/* styles to button click drop box */
+#font-color,
+#background-color {
+  position: relative;
+  display: none;
+  color: white;
+  height: 60px;
+  padding: 3px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+#font-color li,
+#background-color li {
+  list-style-type: none;
+  margin: 2px;
+  width: calc(100%);
+  height: 20px;
+}
+
+#font-color li,
+#background-color li {
+  border-radius: 30px;
+}
