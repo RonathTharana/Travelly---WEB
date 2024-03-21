@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<Meta charset="UTF-8"><!-- Meta tags -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Quiz </title>
+	<Link rel="stylesheet" href="CSS/style_quiz.css"><!-- Stylesheets -->
+    <link rel="stylesheet" href="CSS/style.css">
+	<Link rel="stylesheet" href="CSS/footer.css">
+    
+	
+</head>
+
+<body>
+    <!-- Video background -->
+	<video autoplay muted loop id="video-bg">
+		<source src="videos/background.mp4" type="video/mp4">
+	</video>
+    <!-- Navigation bar -->
+    <nav id="top">
+        <a href="../ST-2-Ashley/index.html">
+        <img class= "logo" src="icons/Travelly-nav.png" alt="logo">
+        </a>
+            <!--menu items-->          
+            <ul>
+                <li><a href="../ST-2-Ashley/index.html" class="selected">HOME</a></li>
+                <li><a href="../ST-1-Iman/buyproducts.html">SHOP</a></li>
+                <li><a href="../ST-4-Ronath/gallery.html">GALLERY</a></li>
+                <li><a href="../ST-3-Asani/quiz.html">QUIZ</a></li>
+                <li><a href="../ST-4-Ronath/Sitemap.html">SITE MAP</a></li>
+                <li><a href="../ST-2-Ashley/contact.html">CONTACT</a></li>
+                <li><a href="../ST-3-Asani/student_details.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+        <!-- Quiz section -->
+	<div class="app">
+		<h1> Travel Through the World - Quiz </h1>
+            <!-- Start quiz section -->
+			<div id="start-quiz">
+				<ul>
+                    <li>Total number ofquestions: 10</li>
+                    <li>Time will start after you press the start button</li>
+                    <li>You will get 30 seconds for each question</li>
+                    
+                    <li id="Ayr">Are you ready to start the quiz?</li>
+                </ul>
+                <div>
+				    <button id="start-btn">Start</button>
+                </div>
+			</div>
+
+            <!-- Quiz questions and options section -->
+				<div class="quiz">
+					<h2 id="question"> Question gose here</h2>
+					<div id="progress-bar"></div>
+            		<div id="Answer-buttons">
+                	<!-- Answer buttons will be dynamically added using JavaScript -->
+				</div>
+
+                <!-- Quiz result section (hidden by default) -->
+				<div id="result" style="display: none;">
+					<p id="result-message"></p>
+					<button id="try-again-btn">Try Again</button>
+					<button id="quit-btn" >Quit</button>
+				</div>
+                <!-- Timer section -->
+            	<div id="timer">Time left: <span id="countdown">30</span> seconds</div>
+                <!-- Next button -->
+            	<button id="next-btn">Next</button>
+                <!-- Score display section (hidden by default) -->
+				<div id="score-display" style="display: none;"></div>
+				
+        </div>
+    </div> <!-- Footer section -->
+            <div class="main">
+                <footer class="footer">
+                    <div class="footer-left">
+                        <a href="../ST-2-Ashley/index.html"><img src="icons/Travelly.png" alt="logo"></a>
+                        <p>Our travelly website is your key to unlocking unforgettable adventures across the globe. From breathtaking landscapes to cultural marvels, we curate the best travel experiences for every wanderer.</p>
+                    </div>
+
+                    <!-- Contact information and developers section -->
+
+                    <ul class="footer-right">
+
+                        <li>
+
+                            <h2>Address</h2>
+
+                            <ul class="box">
+                                <li>57, Ramakrishna Rd,</li>
+                                <li>Colombo 06</li>
+                                <li>+94 763408122</li>
+                                <li>ashley.20221899@iit.ac.lk</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h2>Developers</h2>
+
+                            <ul class="box">
+                                <li class="popup"><a href="../ST-2-Ashley/page-editor-Ashley.html">Ashley</a></li>
+                                <li class="popup"><a href="../ST-3-Asani/page-editor-Asani.html">Asani</a></li>
+                                <li class="popup"><a href="../ST-1-Iman/Studentdetails.html">Iman</a></li>
+                                <li class="popup"><a href="../ST-4-Ronath/ronath.html">Ronath</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+
+                            <h2>Creator</h2>
+
+                            <ul class="box">
+                                <li class="creator"><a href="../ST-3-Asani/page-editor-Asani.html">Asani </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="footer-bottom">
+                        <p>All Right reserved by &copy;Travelly</p>
+                    </div>
+                </footer>
+            </div>
+
+            <!-- JavaScript file for quiz functionality -->
+            <script src="JS/script_quiz.js"></script>
+	
+    </body>
+
+</html>

@@ -1,0 +1,136 @@
+@font-face {
+    font-family: head;
+    src: url("Fonts/Abrashe.ttf");
+}
+
+@font-face {
+    font-family: body;
+    src: url("Fonts/VintageGlamour-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: body;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    z-index: -1000;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.container {
+	top: 60px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px 20px;
+
+}
+
+h1 {
+	
+	font-size: 48px;
+	font-weight: bold;
+	margin-bottom: 30px;
+	color: rgb(138, 34, 5);
+	text-align: center;
+}
+
+.tile {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin-bottom: 40px;
+	background-color: #ccc5b914;
+	backdrop-filter: blur(35px);
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: box-shadow 0.3s;
+	text-align: left;
+	border-radius: 20px;
+}
+
+.tile:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.tile img {
+	width: 48%;
+	height: 48%;
+	border-radius: 20px;
+	margin: 25px;
+	margin-top: 60px;
+}
+
+.tile div:nth-child(2){
+	width: 50%;
+}
+
+.tile h2 {
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+	margin: 20px;
+	text-align: center;
+}
+
+.tile p {
+	font-size: 18px;
+	line-height: 1.5;
+	color: white;
+	margin: 20px;
+}
+
+.tile:nth-child(odd) {
+	flex-direction: row-reverse ;
+}
+
+.tile:nth-child(odd) img {
+	margin-left: 40px;
+	margin-top: 80px;
+}
+
+.tile:nth-child(odd) div {
+	margin-left: 40px;
+	margin-right: 0;
+	text-align: left;
+}
+
+.tile:nth-child(odd) h2 {
+	text-align: center;
+}
+
+.tile:nth-child(odd) p {
+	text-align: left;
+}
+
+.button{
+	border-radius: 10px;
+	font-size: 25px;
+	font-weight: 600;
+	padding: 20px;
+	margin-left: 1175px;
+	box-shadow: 0.3px 1px 3px #5DD6F4;
+	background-color: black;
+	color: white;
+}
+
+.button:hover {
+	color: #5DD6F4;
+}
