@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Travelly</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ST-1-Iman/CSS/Presentationpage.css">  
+    
+  </head>
+  <body>
+    <div> <!--video added-->
+      <video autoplay muted loop id="myVideo">
+        <source src="ST-1-Iman/videos/background.mp4" type="video/mp4" >
+      </video>
+    </div>
+           <!--added logo-->
+    <div class="splash-screen">
+      <div class="image-container">
+        <img src="ST-1-Iman/icons/Logo1.png" alt="logo" >
+      </div>
+            <!--text on presentation page-->
+      <div class="text-container">
+        <h1>Travelly</h1>
+        <p>Presented by</p> 
+          <ul>
+            <li>Iman</li>
+            <li>Ashley</li>
+            <li>Asani</li>
+            <li>Ronath</li>
+          </ul>  
+
+           <br>
+           <br>  <!--set the timer-->
+        <div class="timer">
+          <p>Entering website in <span id="countdown">5</span> seconds...</p>
+        </div>
+      </div>
+    </div>
+     <!--timer javascript-->
+    <script> 
+    let countdown = 6;
+    let countdownElement = document.getElementById('countdown');
+    
+    let countdownInterval = setInterval(() => {
+      countdown--;
+      countdownElement.textContent = countdown;
+    
+      if (countdown === 0) {
+        clearInterval(countdownInterval);
+        window.location.replace("ST-2-Ashley/index.html");
+      }
+    }, 1000);
+  </script>
+  </body>
+</html>
